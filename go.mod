@@ -1,4 +1,4 @@
-module github.com/swaggo/echo-swagger
+module github.com/apremalal/echo-swagger
 
 require (
 	github.com/go-openapi/jsonreference v0.19.3 // indirect
