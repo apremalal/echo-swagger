@@ -1,4 +1,4 @@
-package echoSwagger
+package echoswagger
 
 import (
 	"net/http/httptest"
@@ -14,6 +14,9 @@ func TestWrapHandler(t *testing.T) {
 	router := echo.New()
 
 	router.GET("/*", WrapHandler)
+
+	w5 := performRequest("GET", "/", router)
+	assert.Equal(t, 200, w5.Code)
 
 	w1 := performRequest("GET", "/index.html", router)
 	assert.Equal(t, 200, w1.Code)
